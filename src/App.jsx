@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 import Favicon from './components/Favicon'
+import LoadingScreen from './components/LoadingScreen'
 
 // Game constants
 const WINNING_COMBINATIONS = [
@@ -21,6 +22,9 @@ const BOT_DIFFICULTY = {
 }
 
 function App() {
+  // Loading state
+  const [isLoading, setIsLoading] = useState(true)
+  
   // Game state
   const [board, setBoard] = useState(Array(9).fill(null))
   const [currentPlayer, setCurrentPlayer] = useState('X')
@@ -258,6 +262,16 @@ function App() {
     setIsDraw(false)
     setGameActive(false)
     setIsThinking(false)
+  }
+
+  // Handle loading completion
+  const handleLoadingComplete = () => {
+    setIsLoading(false)
+  }
+
+  // Show loading screen if still loading
+  if (isLoading) {
+    return <LoadingScreen onLoadingComplete={handleLoadingComplete} />
   }
 
   return (
