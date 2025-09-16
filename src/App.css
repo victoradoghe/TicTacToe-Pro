@@ -194,29 +194,29 @@ body {
 }
 
 .current-x {
-  background: linear-gradient(135deg, #ff9a9e 0%);
+  /* background: linear-gradient(135deg, #ff9a9e 0%); */
   color: #d63384;
 }
 
 .current-o {
-  background: linear-gradient(135deg, #a8edea 0% );
+  /* background: linear-gradient(135deg, #a8edea 0% ); */
   color: #0dcaf0;
 }
 
 .winner {
-  background: linear-gradient(135deg, #ffecd2 0% );
+  /* background: linear-gradient(135deg, #ffecd2 0% ); */
   color: #e67e22;
   animation: pulse 1s infinite;
 }
 
 .draw {
-  background: linear-gradient(135deg, #d299c2 0%);
+  /* background: linear-gradient(135deg, #d299c2 0%); */
   color: #6c757d;
   animation: pulse 1s infinite;
 }
 
 .thinking {
-  background: linear-gradient(135deg, #667eea 0%);
+  /* background: linear-gradient(135deg, #667eea 0%); */
   color: white;
   animation: pulse 1.5s infinite;
 }
